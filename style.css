@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+}
+
+.new-year-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ff0000,
+                 0 0 20px #ff0000,
+                 0 0 30px #ff0000;
+    z-index: 10;
+    opacity: 0.9;
+    animation: glow 2s infinite alternate;
+}
+
+span {
+    background: url("https://cdn4.iconfinder.com/data/icons/small-n-flat/24/heart-512.png");
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    pointer-events: none;
+    background-size: cover;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: animate 6s linear;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        filter: hue-rotate(0);
+
+    }
+    100% {
+        transform: translate(-50%, -500%);
+        opacity: 0;
+        filter: hue-rotate(720deg);
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ff0000,
+                     0 0 20px #ff0000,
+                     0 0 30px #ff0000;
+    }
+    to {
+        text-shadow: 0 0 20px #ff0000,
+                     0 0 30px #ff0000,
+                     0 0 40px #ff0000,
+                     0 0 50px #ff0000;
+    }
+}
+
